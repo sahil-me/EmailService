@@ -1,6 +1,18 @@
 # 🛒 E-Commerce Platform 🛍
 
-**
+## Infrastructure
+
+[![Spring Cloud | Service Discovery](https://img.shields.io/badge/Spring%20Cloud-Service%20Discovery-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://github.com/sahil-me/ServiceDiscovery)
+[![Spring Cloud | API Gateway](https://img.shields.io/badge/Spring%20Cloud-API%20Gateway-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://github.com/sahil-me/ApiGateway)
+
+## Business Services
+
+[![Microservice | User Service](https://img.shields.io/badge/Microservice-User%20Service-007EC6?style=for-the-badge&labelColor=555555&logo=spring&logoColor=white)](https://github.com/sahil-me/UserService)
+[![Microservice | Product Service](https://img.shields.io/badge/Microservice-Product%20Service-007EC6?style=for-the-badge&labelColor=555555&logo=spring&logoColor=white)](https://github.com/sahil-me/ProductService)
+[![Microservice | Payment Service](https://img.shields.io/badge/Microservice-Payment%20Service-007EC6?style=for-the-badge&labelColor=555555&logo=spring&logoColor=white)](https://github.com/sahil-me/PaymentService)
+[![Microservice | Email Service](https://img.shields.io/badge/Microservice-Email%20Service-007EC6?style=for-the-badge&labelColor=555555&logo=spring&logoColor=white)](https://github.com/sahil-me/EmailService)
+
+https://github.com/user-attachments/assets/48c32572-9405-4ea8-b42c-141b23c28af8
 
 > 🎥 Email Service Demonstration!
 
@@ -8,6 +20,7 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
+- [Architecture Diagram](#architecture-diagram)
 - [Project Structure](#project-structure)
 - [Tech Stack](#tech-stack)
 - [Product Requirements Document (PRD)](#product-requirements-document-prd)
@@ -46,28 +59,54 @@ The project demonstrates real-world backend engineering concepts including RESTf
 
 ---
 
+## Architecture Diagram
+
+    Client
+       │
+       ▼
+    API Gateway
+       │
+       ▼
+    Service Discovery
+       │
+       ├── User Service
+       ├── Product Service
+       ├── Payment Service
+       └── Email Service
+
+---
+
 ## Project Structure
 
-**
+    E-Commerce-Platform/
+    │
+    ├── ServiceDiscovery/   # Eureka Service Registry
+    ├── ApiGateway/         # API Gateway
+    ├── UserService/        # User Management
+    ├── ProductService/     # Product Catalog Management
+    ├── PaymentService/     # Payment Integration
+    └── EmailService/       # Email Notifications
 
 ---
 
 ## Tech Stack
 
-| Technology                          | Purpose                                       |
-| ----------------------------------- | --------------------------------------------- |
-| Java 21                             | Programming Language                          |
-| Spring Boot 3.5.0                   | Backend Framework                             |
-| Spring Web                          | REST API Development                          |
-| Spring Kafka                        | Event-Driven Messaging & Kafka Integration    |
-| Apache Kafka                        | Message Broker for Asynchronous Communication |
-| JavaMail API                        | Email Composition & SMTP Integration          |
-| Lombok                              | Boilerplate Code Reduction                    |
-| Maven                               | Dependency Management & Build Tool            |
-| Spring Boot DevTools                | Development Productivity & Hot Reload         |
-| Spring Boot Configuration Processor | Type-Safe Configuration Support               |
-| JUnit 5                             | Unit & Integration Testing                    |
-| IntelliJ IDEA                       | Development Environment                       |
+| Technology                          | Purpose                                  |
+| ----------------------------------- | ---------------------------------------- |
+| Java 21                             | Core Programming Language                |
+| Spring Boot 3.4.0                   | Application Framework                    |
+| Spring Web                          | RESTful API Development                  |
+| Spring Kafka                        | Kafka Producer/Consumer Integration      |
+| Apache Kafka                        | Event Streaming & Message Broker         |
+| JavaMail API                        | Email Composition & SMTP Communication   |
+| Spring Cloud Netflix Eureka Client  | Service Discovery                        |
+| Lombok                              | Boilerplate Code Reduction               |
+| Maven                               | Build Automation & Dependency Management |
+| Spring Boot DevTools                | Development & Hot Reload Support         |
+| Spring Boot Configuration Processor | Configuration Metadata Support           |
+| JUnit 5                             | Testing Framework                        |
+| IntelliJ IDEA                       | Integrated Development Environment       |
+
 
 ---
 
